@@ -27,18 +27,18 @@ Taskify is a lightweight and efficient task management application built using N
    npm install
 
 3. **Set up PostgreSQL Database**
-    CREATE TABLE members (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+    1. CREATE TABLE members (
+       id SERIAL PRIMARY KEY,
+       name VARCHAR(100) NOT NULL,
+       joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
 
-CREATE TABLE items (
-    id SERIAL PRIMARY KEY,
-    member_id INTEGER REFERENCES members(id) ON DELETE CASCADE,
-    content TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+  2. CREATE TABLE items (
+     id SERIAL PRIMARY KEY,
+     member_id INTEGER REFERENCES members(id) ON DELETE CASCADE,
+     content TEXT NOT NULL,
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
 
 
 4. **Start the server**
@@ -47,12 +47,12 @@ CREATE TABLE items (
 
 5. **Project Structure**
 Taskify/
-├── public/              # Static files (CSS, images, etc.)
-├── views/               # EJS templates
-├── app.js               # Main server file
-└── README.md            # Documentation
+ public/              
+├── views/               
+├── app.js               
+└── README.md           
 
 6. **Future Enhancements**
-    Add user authentication.
-    Implement task prioritization.
-    Add search and filtering functionality.
+    1. Add user authentication.
+    2. Implement task prioritization.
+    3. Add search and filtering functionality.
