@@ -1,6 +1,6 @@
 # **Taskify**
 
-Taskify is a simple task management app built with **Node.js**, **Express**, **EJS**, and **PostgreSQL**. It allows users to manage members and their associated tasks efficiently.
+Taskify is a lightweight and efficient task management application built using Node.js, Express, EJS, and PostgreSQL. It provides an intuitive interface for managing members and their associated tasks, enabling seamless task organization and productivity.
 
 ---
 
@@ -21,7 +21,7 @@ Taskify is a simple task management app built with **Node.js**, **Express**, **E
 ## **How to Run**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Taskify.git
+   git clone https://github.com/AliZagham1/Taskify.git
    cd Taskify
 2. **Install Dependencies**
    npm install
@@ -43,3 +43,16 @@ CREATE TABLE items (
 
 4. **Start the server**
      node app.js
+
+
+5. **Project Structure**
+Taskify/
+├── public/              # Static files (CSS, images, etc.)
+├── views/               # EJS templates
+├── app.js               # Main server file
+└── README.md            # Documentation
+
+6. **Future Enhancements**
+    Add user authentication.
+    Implement task prioritization.
+    Add search and filtering functionality.
