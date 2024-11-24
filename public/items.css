@@ -1,0 +1,103 @@
+/* General container styles */
+.items-container {
+    max-width: 800px;
+    margin: 150px auto; /* Adjust margin-top to move it below the header */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Heading */
+.items-container h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* List styles */
+.items-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Task item */
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #34495e;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Task content */
+.item-content {
+    font-size: 1rem;
+    flex-grow: 1; /* Ensure content takes the available space */
+    text-align: left;
+    margin-right: 20px; /* Add space between content and buttons */
+    overflow-wrap: break-word; /* Ensure long text wraps */
+}
+
+/* Action buttons container */
+.item-actions {
+    display: flex; /* Arrange buttons horizontally */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Buttons styling */
+.edit-button, .delete-button {
+    background: #1abc9c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    background: #1abc9c; /* Default Edit button color */
+}
+
+.edit-button:hover {
+    background: #16a085;
+}
+
+.delete-button {
+    background: #e74c3c;
+}
+
+.delete-button:hover {
+    background: #c0392b;
+}
+
+/* Add task button */
+.floating-add-button {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.floating-add-button:hover {
+    background: #2980b9;
+    transform: scale(1.1);
+}

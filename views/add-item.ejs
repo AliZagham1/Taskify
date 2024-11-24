@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/add-item.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="form-container">
+        <h1>Add a New Task</h1>
+        <form action="/members/<%= memberId %>/add-item" method="POST">
+            <label for="content">Task Content:</label>
+            <input type="text" id="content" name="content" required>
+            <button type="submit" class="submit-button">Add Task</button>
+        </form>
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>

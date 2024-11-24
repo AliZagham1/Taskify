@@ -1,0 +1,52 @@
+.form-container {
+    max-width: 600px; /* Increase the maximum width */
+    width: 80%; /* Set a percentage width relative to the page */
+    padding: 20px; /* Add inner spacing for a clean look */
+    margin: 150px auto; /* Center the container and move it down */
+    background: rgba(255, 255, 255, 0.1); /* Keep the semi-transparent background */
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    text-align: center; /* Center the text inside */
+}
+
+
+.form-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-container input {
+    width: 100%; /* Make the input take full width of its container */
+    max-width: 500px; /* Optional: Limit the maximum width */
+    padding: 10px; /* Add inner spacing */
+    font-size: 1.2rem; /* Larger text */
+    border: 1px solid #ccc; /* Border for clarity */
+    border-radius: 5px; /* Smooth corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Prevent horizontal scrolling */
+    text-overflow: ellipsis; /* Truncate overflowed text with "..." */
+}
+
+
+
+.submit-button {
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #2980b9;
+}

@@ -1,0 +1,113 @@
+/* Floating Add Button */
+.floating-add-button {
+    position: fixed; /* Keep it fixed relative to the viewport */
+    bottom: 100px; /* Adjust height to prevent overlapping with footer */
+    right: 30px; /* Align it slightly away from the edge */
+    background: #3498db; /* Blue background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 50%; /* Circular button */
+    width: 65px; /* Slightly larger button */
+    height: 65px;
+    font-size: 2rem; /* Larger plus sign */
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.floating-add-button:hover {
+    background: #2980b9; /* Darker blue on hover */
+    transform: scale(1.15); /* Slight zoom-in effect */
+}
+
+/* Members List */
+.members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Consistent spacing between member items */
+    margin: 20px;
+    margin-top: 200px;
+    padding: 20px; /* Padding for better spacing */
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background for contrast */
+    border-radius: 10px; /* Smooth corners */
+}
+
+/* Member Item */
+.member-item {
+    display: flex;
+    justify-content: space-between; /* Ensure consistent spacing between text and buttons */
+    align-items: center; /* Vertically align content */
+    padding: 15px 20px; /* Padding inside each item */
+    background: #34495e; /* Slightly darker background for members */
+    color: #ffffff; /* White text for readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Member Name */
+.member-name {
+    flex: 1; /* Allow the name to take up available space */
+    margin-right: 20px; /* Add space between the name and buttons */
+    font-size: 1.2rem; /* Slightly larger font size */
+}
+
+/* Action Buttons */
+/* Action Buttons */
+.edit-button, .delete-button {
+    background: #1abc9c; /* Same background color for Edit */
+    color: #ffffff; /* White text for readability */
+    border: none;
+    padding: 10px 20px; /* Consistent padding for button size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    text-align: center; /* Center text */
+    display: inline-block; /* Ensure consistent button behavior */
+    text-decoration: none; /* Removes underline */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    font-size: 1rem; /* Consistent font size */
+    width: 110px; /* Ensure consistent width for buttons */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Adjust margins to ensure spacing */
+.edit-button {
+    margin-right: 15px; /* Add consistent space between Edit and Delete buttons */
+    background: #1abc9c; /* Default Edit button color */
+}
+
+.edit-button:hover {
+    background: #16a085; /* Darker green for hover effect */
+}
+
+.delete-button {
+    background: #e74c3c; /* Default Delete button color */
+}
+
+.delete-button:hover {
+    background: #c0392b; /* Darker red for hover effect */
+}
+
+/* Member Actions */
+.member-actions {
+    display: flex;
+    gap: 15px; /* Add consistent spacing between buttons */
+    justify-content: flex-end; /* Align buttons to the right of the member card */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .member-item {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: flex-start; /* Align content to the left */
+    }
+
+    .member-actions {
+        width: 100%; /* Buttons take up full width */
+        margin-top: 10px; /* Add spacing between name and buttons */
+        display: flex;
+        gap: 15px; /* Ensure consistent gap between buttons */
+        justify-content: space-between; /* Space out buttons on smaller screens */
+    }
+}
