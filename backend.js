@@ -3,18 +3,21 @@ import pg from "pg";
 import methodOverride from "method-override";
 import dotenv from "dotenv";
 
-// Load environment variables
+
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
 }
-const db = new pg.Client({
-  host: process.env.DATABASE_HOST,
-  port: process.env.DATABASE_PORT,
-  user: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATABASE_NAME,
-  ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
-});
+const db = new pg.Client(
+  process.env.DATABASE_URL ||
+  {
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    host: process.env.DATABASE_HOST,
+    port: process.env.DATABASE_PORT,
+    database: process.env.DATABASE_NAME,
+    ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
+  }
+);
 
 db.connect((err) => {
   if (err) {
