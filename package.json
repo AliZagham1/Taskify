@@ -1,20 +1,24 @@
 {
-  "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^4.21.1",
-    "method-override": "^3.0.0",
-    "nodemon": "^3.1.7",
-    "pg": "^8.13.1"
-  },
   "name": "taskify",
   "version": "1.0.0",
+  "description": "Taskify - A simple task management app built with Node.js, Express, EJS, and PostgreSQL.",
   "main": "backend.js",
   "type": "module",
   "scripts": {
+    "start": "node backend.js",
+    "dev": "nodemon backend.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Syed Muhammad Ali Zagham",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "method-override": "^3.0.0",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
 }
