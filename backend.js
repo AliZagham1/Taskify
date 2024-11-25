@@ -7,17 +7,23 @@ import dotenv from "dotenv";
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
 }
-const db = new pg.Client(
-  process.env.DATABASE_URL ||
-  {
-    user: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
-    host: process.env.DATABASE_HOST,
-    port: process.env.DATABASE_PORT,
-    database: process.env.DATABASE_NAME,
-    ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
+const db = new pg.Client({
+  user: process.env.DATABASE_USER,
+  host: process.env.DATABASE_HOST,
+  database: process.env.DATABASE_NAME,
+  password: process.env.DATABASE_PASSWORD,
+  port: process.env.DATABASE_PORT,
+});
+
+db.connect((err) => {
+  if (err) {
+    console.error("Database connection error:", err.stack);
+  } else {
+    console.log("Database connected successfully");
   }
-);
+});
+
+
 
 db.connect((err) => {
   if (err) {
