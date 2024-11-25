@@ -16,7 +16,18 @@ Taskify is a lightweight and efficient task management application built using N
 - **Backend**: Node.js, Express
 - **Database**: PostgreSQL
 
+**Screenshots**
+### Home Page
+![Home Page](./screenshots/HomePage1.png)
 
+### Members List
+![Members List](./screenshots/MembersList.png)
+
+### Tasks Page
+![Tasks Page](./screenshots/TasksPage3.png)
+
+### About Page
+![About Page](./screenshots/AboutPage4.png)
 
 
  **Project Structure**
